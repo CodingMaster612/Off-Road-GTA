@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "axios";
+import { useState } from "react";
 import '../../App.css';
 
 import img from '../../img/OpenRoad.png';
@@ -6,40 +8,60 @@ import img from '../../img/OpenRoad.png';
 
 
 export default function HomePage() {
+   const [email, setEmail] = useState("");
+   const [password, setPassword] = useState("");
+
+   async function handleSubmit(event) {
+      event.preventDefault();
+      try {
+         await axios.post("http://localhost:8081/user/signIn",
+            {
+               email: email,
+               password: password,
+
+            });
+         alert("User sign in Successfully");
+
+         setEmail("");
+         setPassword("");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+      }
+      catch (err) {
+         alert("User login Failed");
+      }
+   }
    return (
       <header style={HeaderStyle}>
 
-         <div className="wrapper">
+         <form className="wrapper" onSubmit={handleSubmit}>
             <div className="rectangle">
                <img className="Open-Road" src={img} />
                <div className="box">
                   <div className="input-wrapper">
                      <div className="input-box">
-                        
-                        <input type="text" placeholder=""id="lname" name="lname" />
+
+                        <input type="text" name="email"
+                           onChange={(event) => {
+                              setEmail(event.target.value);
+                           }} />
                      </div>
                      <div className="input-box">
-                        <input type="text" placeholder=""id="lname" name="lname" />
+                        <input type="password"  name="password"
+
+                           onChange={(event) => {
+                              setPassword(event.target.value);
+                           }} />
+
+
+
+
                      </div>
-                     
+
                   </div>
                   <h1>User</h1>
                   <h2>Password</h2>
-                  <button class="button">Login</button>
+                  <button type="submit" className="button">Login</button>
                </div>
             </div>
 
@@ -48,9 +70,9 @@ export default function HomePage() {
 
 
 
-         </div>
 
 
+         </form>
 
       </header >
    )
