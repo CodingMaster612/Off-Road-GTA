@@ -21,7 +21,7 @@ export default function HomePage() {
 
             });
          alert("User sign in Successfully");
-
+         window.location.href = '/ProductPage';
          setEmail("");
          setPassword("");
 
