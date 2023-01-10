@@ -13,7 +13,7 @@ export default function ProductPage() {
    async function handleSubmit(event) {
       event.preventDefault();
       try {
-         await axios.post("http://localhost:8081/product/AllProducts/productId",
+         await axios.post("http://localhost:8081/product/allProducts/productId",
             {
                product_id: product_id,
                
