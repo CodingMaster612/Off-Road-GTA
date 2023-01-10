@@ -24,7 +24,7 @@ export default function HomePage() {
          window.location.href = '/ProductPage';
          setEmail("");
          setPassword("");
-
+//get all images and content by chooseing id /user/getAll/{}
 
       }
       catch (err) {

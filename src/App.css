@@ -200,9 +200,9 @@ h2{
   align-items: center;
 }
 .text-wrapper{
-  position: relative;
-  top: 225px;
-  left: 10%;
+  position: fixed;
+  top: 200px;
+  left: 15%;
  
 }
 
@@ -212,16 +212,65 @@ h2{
  .link-header h10{
   position: relative;
   font-size: 1.5em;
-  top: -125px;
+  top: -75px;
+  
   color: orange
  }
 
 
-.All{
+.All-forge{
 padding: 0;
 border: none;
 background: none;
 font-size: 20px;
 position: relative;
-top: -25px;
+top: 200px;
+left: -11%;
 }
+
+.All-content{
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 20px;
+  position: relative;
+  top: -25px;
+  left: -2%;
+  }
+  .All-weed{
+    padding: 0;
+    border: none;
+    background: none;
+    font-size: 20px;
+    position: relative;
+    top: 50px;
+    left: -29%;
+    }
+    .All-count{
+      padding: 0;
+      border: none;
+      background: none;
+      font-size: 20px;
+      position: relative;
+      top: 400px;
+      left: -45%;
+      }
+      .All-cocaine{
+        padding: 0;
+        border: none;
+        background: none;
+        font-size: 20px;
+        position: relative;
+        top: 300px;
+        left: -89%;
+        }
+
+        .All-meth{
+          padding: 0;
+          border: none;
+          background: none;
+          font-size: 20px;
+          position: relative;
+          top: 125px;
+          left: -77%;
+          }
